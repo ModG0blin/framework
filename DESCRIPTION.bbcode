@@ -11,8 +11,12 @@ On its own, Nozavolochen does nothing. It only provides the infrastructure for m
 Nozavolochen exists to unify mod loading under a single DLL, reducing conflicts and simplifying the modding process. When I built [url=https://www.nexusmods.com/nomanssky/mods/4697]Bigger Item Grids and Smaller Inventory Slots[/url] I needed to include the functionality of [url=https://www.nexusmods.com/nomanssky/mods/4545]NMS BootSkip[/url] as only one DLL can load at a time, which motivated the creation of a shared host for multiple mods.
 
 [b]Install[/b]
-
-Install with Vortex with no extra steps (it routes the DLL into `Binaries/`). For Amethyst, do not use Root Folder install. Set a one-time Routing Rule (Data tab > Routing Rules at the bottom near the Search bar > Add: Destinations `Binaries`, Extensions `.dll` > Save) then deploy, or manually move the deployed `xinput9_1_0.dll` into `Binaries/`. Manual install: drop `xinput9_1_0.dll` into the game's `Binaries/` folder. Then install any Nozavolochen mods normally; each declares this mod as a required dependency.
+[list]
+[*][b]Vortex:[/b] install with no extra steps. It routes the DLL into `Binaries/` for you.[/*]
+[*][b]Amethyst (Routing Rule, one-time):[/b] [b]Data tab > Routing Rules[/b] (bottom, near Search) [b]> Add > Destinations:[/b] `Binaries`, [b]Extensions:[/b] `.dll` [b]> Save[/b], then deploy.[/*]
+[*][b]Manual install (no manager):[/b] drop `xinput9_1_0.dll` into the game's `Binaries/` folder.[/*]
+[/list]
+Then install any Nozavolochen mods normally; each declares this mod as a required dependency.
 
 On Linux (Proton), add this line to the game's Launch Options:
 
