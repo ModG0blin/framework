@@ -12,7 +12,7 @@ Nozavolochen exists to unify mod loading under a single DLL, reducing conflicts 
 
 [b]Install[/b]
 
-Install the archive as a [b]Root Folder[/b] mod (Amethyst: right-click the mod and select [b]Enable Root Folder install[/b]) or drop its contents into the game folder, so `xinput9_1_0.dll` lands in `Binaries/`. Then install any Nozavolochen mods normally; each declares this mod as a required dependency.
+Install with Vortex with no extra steps (it routes the DLL into `Binaries/`). For Amethyst, do not use Root Folder install. Set a one-time Routing Rule (Data tab > Routing Rules at the bottom near the Search bar > Add: Destinations `Binaries`, Extensions `.dll` > Save) then deploy, or manually move the deployed `xinput9_1_0.dll` into `Binaries/`. Manual install: drop `xinput9_1_0.dll` into the game's `Binaries/` folder. Then install any Nozavolochen mods normally; each declares this mod as a required dependency.
 
 On Linux (Proton), add this line to the game's Launch Options:
 

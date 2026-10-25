@@ -32,9 +32,9 @@ loader:
 	@echo "loader: $(DLL)"
 
 dist: loader
-	@rm -rf "$(BUILD)/fwzip" && mkdir -p "$(BUILD)/fwzip/Binaries"
-	@cp "$(DLL)" "$(BUILD)/fwzip/Binaries/"
-	@mkdir -p "$(DIST)" && rm -f "$(FRAMEWORK_ZIP)" && cd "$(BUILD)/fwzip" && zip -qr "$(shell pwd)/$(FRAMEWORK_ZIP)" Binaries
+	@rm -rf "$(BUILD)/fwzip" && mkdir -p "$(BUILD)/fwzip"
+	@cp "$(DLL)" "$(BUILD)/fwzip/"
+	@mkdir -p "$(DIST)" && rm -f "$(FRAMEWORK_ZIP)" && cd "$(BUILD)/fwzip" && zip -qr "$(shell pwd)/$(FRAMEWORK_ZIP)" xinput9_1_0.dll
 	@echo "packed: $(FRAMEWORK_ZIP)"
 	@unzip -l "$(FRAMEWORK_ZIP)" | tail -3
 

@@ -10,7 +10,7 @@ boot.
 ## Mod distribution
 
 The framework ships as its own [release](https://www.nexusmods.com/games/nomanssky/mods/4700?tab=files): an archive with
-`Binaries/xinput9_1_0.dll`, marked as a required dependency on Nexus by your mod. Mods
+flat `xinput9_1_0.dll` at the root, marked as a required dependency on Nexus by your mod. Vortex routes it into `Binaries/` with no extra steps; Amethyst needs a one-time Routing Rule (Data tab > Routing Rules: Destinations `Binaries`, Extensions `.dll`) or a manual move into `Binaries/`. Mods
 ship only their `mod.toml` (plus static files if required) and never bundle
 the DLL.
 
